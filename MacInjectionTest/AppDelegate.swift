@@ -14,7 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        #if DEBUG
+        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/macOSInjection.bundle")?.load()
+        #endif
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
